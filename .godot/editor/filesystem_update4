@@ -1,1 +1,4 @@
-res://parallax_background.tscn
+res://background.tscn
+res://tilemap.tscn
+res://tilemap.gdshader
+res://shaders/water.gdshader
