@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715632247
-background.tscn::PackedScene::174304243144887536::1715632018::0::1::::<><>::uid://c8qrpftrwwn48::::res://graphics/background pixel.png<>uid://eiivbnpox8qr::::res://tilemap.tscn<>res://shaders/water.gdshader<>uid://civj1dy1kh4c7::::res://graphics/woda.png<>uid://de3r5p3rlfjil::::res://graphics/woda2.png<>uid://8pj7d3vse8h6::::res://graphics/ryba.png<>uid://b1yf2tdy4jovl::::res://player.tscn
+::res://::1715690835
+background.tscn::PackedScene::174304243144887536::1715648626::0::1::::<><>::uid://c8qrpftrwwn48::::res://graphics/background pixel.png<>uid://eiivbnpox8qr::::res://tilemap.tscn<>res://shaders/water.gdshader<>uid://dkcddwnao4sbk::::res://woda.png<>uid://de3r5p3rlfjil::::res://graphics/woda2.png<>uid://8pj7d3vse8h6::::res://graphics/ryba.png<>uid://b1yf2tdy4jovl::::res://player.tscn
 icon.svg::CompressedTexture2D::702353588804326700::1715444752::1715444758::1::::<><>::
-Player.gd::GDScript::-1::1715632018::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4261228489486282725::1715632018::0::1::::<><>::res://Player.gd<>uid://c26b5or4i4fm3::::res://graphics/RYBAK.png
-tilemap.tscn::PackedScene::297793707505732589::1715632018::0::1::::<><>::
+Player.gd::GDScript::-1::1715648626::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4261228489486282725::1715648996::0::1::::<><>::res://Player.gd<>uid://c26b5or4i4fm3::::res://graphics/RYBAK.png
+tilemap.tscn::PackedScene::297793707505732589::1715648627::0::1::::<><>::
 woda.png::CompressedTexture2D::7865467926943790588::1715632247::1715632248::1::::<><>::
 ::res://graphics/::1715626887
 background pixel.png::CompressedTexture2D::7123162520062547487::1715466452::1715561723::1::::<><>::
@@ -17,5 +17,5 @@ spritesheet do gamejama.png::CompressedTexture2D::5831281662025182610::171556128
 woda2.png::CompressedTexture2D::7498906597331368119::1715566200::1715566200::1::::<><>::
 woda3.png::CompressedTexture2D::287732356399853122::1715626660::1715626661::1::::<><>::
 woda.png::CompressedTexture2D::5378297128742491504::1715626886::1715626887::1::::<><>::
-::res://shaders/::1715632018
-water.gdshader::Shader::-1::1715632018::0::1::::<><>::
+::res://shaders/::1715648997
+water.gdshader::Shader::-1::1715648997::0::1::::<><>::
