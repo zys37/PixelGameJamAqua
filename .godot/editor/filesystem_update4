@@ -1,4 +1,5 @@
 res://background.tscn
-res://tilemap.tscn
-res://tilemap.gdshader
 res://shaders/water.gdshader
+res://tilemap.tscn
+res://player.tscn
+res://Player.gd
