@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -100.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree: AnimationTree = $AnimationTree
+var direction = Vector2.ZERO
 func _ready():
 	animation_tree.active = true
 func _process(delta):
@@ -39,7 +40,13 @@ func update_animation():
 		animation_tree["parameters/conditions/is_running"] = true
 	
 	if(Input.is_action_just_pressed("throw")):
+		animation_tree["parameters/conditions/hook"] = false
 		animation_tree["parameters/conditions/throw"] = true
 	if(Input.is_action_just_pressed("hook")):
 		animation_tree["parameters/conditions/throw"] = false
 		animation_tree["parameters/conditions/hook"] = true
+		
+	animation_tree["parameters/Idle/blend_position"] = direction
+	animation_tree["parameters/hook/blend_position"] = direction
+	animation_tree["parameters/throw/blend_position"] = direction
+	animation_tree["parameters/run/blend_position"] = direction
