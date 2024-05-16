@@ -1,11 +1,11 @@
+TileMap
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
 Sprite2D
 AnimationPlayer
 AnimationTree
 Timer
-CollisionShape2D
-AnimatedSprite2D
-CharacterBody2D
-TileMap
 StaticBody2D
 TextureRect
 ParallaxLayer

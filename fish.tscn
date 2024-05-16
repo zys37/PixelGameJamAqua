@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://b01658t4ad2rg"]
+
+[ext_resource type="Texture2D" uid="uid://8pj7d3vse8h6" path="res://graphics/ryba.png" id="1_7ooj3"]
+[ext_resource type="Script" path="res://fish_script.gd" id="1_d401g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11iug"]
+atlas = ExtResource("1_7ooj3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p40v4"]
+atlas = ExtResource("1_7ooj3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxvy6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11iug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p40v4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cfwd"]
+size = Vector2(20, 11)
+
+[node name="Fish" type="CharacterBody2D"]
+script = ExtResource("1_d401g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxvy6")
+autoplay = "default"
+frame_progress = 0.848255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_6cfwd")

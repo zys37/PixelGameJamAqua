@@ -1,5 +1,6 @@
-res://player.tscn
-res://shaders/water.gdshader
-res://Player.gd
 res://background.tscn
+res://shaders/water.gdshader
+res://player.tscn
 res://tilemap.tscn
+res://fish.tscn
+res://fish_script.gd
