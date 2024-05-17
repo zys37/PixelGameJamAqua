@@ -1,9 +1,9 @@
+Sprite2D
+CharacterBody2D
 Timer
 CollisionShape2D
 Area2D
-Sprite2D
 AnimatedSprite2D
-CharacterBody2D
 TileMap
 AnimationPlayer
 AnimationTree

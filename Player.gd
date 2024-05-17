@@ -3,17 +3,41 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -100.0
+const hook_speed = 155
+const hook_back_speed = 150
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree: AnimationTree = $AnimationTree
 var direction = Vector2.ZERO
-signal throw_finished()
+#hook properties
+var hook_initial_pos = Vector2.ZERO
+var hook_throw_distance = 100
+var target_pos = hook_initial_pos
+var bottom_reached = false
+@onready var fish_detection: Area2D = $Area2D
+var score = 0
+
 func _ready():
 	animation_tree.active = true
+	hook_initial_pos=$hooktexture.position.y
+	target_pos.y+=185
 func _process(delta):
 	update_animation()
 func _physics_process(delta):
+	#hook
+	# Don't process hook movement if animation not active
+
+	# Check if the hook reached the bottom
+	if ($hooktexture.position.y <= target_pos.y and bottom_reached==false):
+		$hooktexture.position.y+=hook_speed*delta
+		if $hooktexture.position.y >= target_pos.y:
+			bottom_reached=true
+	if ($hooktexture.position.y >= hook_initial_pos and bottom_reached==true):
+		$hooktexture.position.y-=hook_speed*delta
+		if $hooktexture.position.y <= hook_initial_pos:
+			bottom_reached=false
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -67,6 +91,7 @@ func update_animation():
 
 func _on_timer_timeout():
 	$hooktexture.visible = true
+	$hooktexture.position.y = hook_initial_pos
 
 
 

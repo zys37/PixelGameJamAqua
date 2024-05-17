@@ -1,10 +1,10 @@
-res://background.tscn
+res://hooktexture.tscn
 res://shaders/water.gdshader
+res://background.tscn
 res://player.tscn
 res://fish.tscn
-res://fish_script.gd
 res://fish_red.tscn
 res://fish_cat.tscn
 res://fish_purple.tscn
-res://hooktexture.tscn
+res://hook_script.gd
 res://Player.gd
