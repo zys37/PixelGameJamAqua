@@ -1,6 +1,10 @@
 res://background.tscn
 res://shaders/water.gdshader
 res://player.tscn
-res://tilemap.tscn
 res://fish.tscn
 res://fish_script.gd
+res://fish_red.tscn
+res://fish_cat.tscn
+res://fish_purple.tscn
+res://hooktexture.tscn
+res://Player.gd

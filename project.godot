@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1092
 window/stretch/mode="canvas_items"
 
+[editor]
+
+run/main_run_args="--rendering-driver opengl3"
+
 [input]
 
 move_left={
@@ -48,3 +52,4 @@ hook={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+rendering_device/driver="opengl3"

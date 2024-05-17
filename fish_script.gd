@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@export var speed = randf_range(80, 150)
+@export var speed = randf_range(100, 180)
 var initial_timer = 0.0
 var timer = 0.0
 var direction = 1
@@ -10,8 +10,8 @@ func _ready():
 func _physics_process(delta):
 	timer += delta
 	initial_timer += delta
-	if initial_timer >= randf_range(7.0, 11.0):
-		if timer >= randf_range(1.0, 6.0):
+	if initial_timer >= randf_range(5.0, 9.0):
+		if timer >= randf_range(2.0, 10.0):
 			direction = -direction
 			if direction == 1:
 				$AnimatedSprite2D.flip_h = false

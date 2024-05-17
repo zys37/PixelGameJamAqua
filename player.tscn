@@ -492,3 +492,5 @@ libraries = {
 position = Vector2(-2, 0)
 texture = ExtResource("2_25hf2")
 hframes = 18
+
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

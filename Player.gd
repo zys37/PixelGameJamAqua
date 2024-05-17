@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -100.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree: AnimationTree = $AnimationTree
 var direction = Vector2.ZERO
+signal throw_finished()
 func _ready():
 	animation_tree.active = true
 func _process(delta):
@@ -26,6 +27,12 @@ func _physics_process(delta):
 		$Body.flip_h = false
 	if Input.is_action_pressed("move_right"):
 		$Body.flip_h = true
+	if Input.is_action_just_pressed("move_right") and $hooktexture.position.x<0:
+		$hooktexture.position.x*=-1
+		$hooktexture.flip_h=true
+	if Input.is_action_just_pressed("move_left") and $hooktexture.position.x>0:
+		$hooktexture.position.x*=-1
+		$hooktexture.flip_h=false
 	#animations
 	#apply movement
 	if direction:
@@ -43,10 +50,12 @@ func update_animation():
 		animation_tree["parameters/conditions/idle"] = false
 		animation_tree["parameters/conditions/is_running"] = true
 	
-	if(Input.is_action_just_pressed("throw")):
+	if(Input.is_action_just_pressed("throw")) and animation_tree["parameters/conditions/is_running"] == false:
 		animation_tree["parameters/conditions/hook"] = false
 		animation_tree["parameters/conditions/throw"] = true
+		$Timer.start()
 	if(Input.is_action_just_pressed("hook")):
+		$hooktexture.visible = false
 		animation_tree["parameters/conditions/throw"] = false
 		animation_tree["parameters/conditions/hook"] = true
 		
@@ -54,3 +63,10 @@ func update_animation():
 	animation_tree["parameters/hook/blend_position"] = direction
 	animation_tree["parameters/throw/blend_position"] = direction
 	animation_tree["parameters/run/blend_position"] = direction
+
+
+func _on_timer_timeout():
+	$hooktexture.visible = true
+
+
+
