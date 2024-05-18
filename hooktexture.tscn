@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3r0lsswnmcrb"]
+[gd_scene load_steps=4 format=3 uid="uid://c3r0lsswnmcrb"]
 
 [ext_resource type="Texture2D" uid="uid://csdwh1xnk1bl1" path="res://graphics/hak.png" id="1_iqk41"]
+[ext_resource type="Script" path="res://hooktexture.gd" id="2_jc30b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p1dfx"]
-radius = 3.16228
+radius = 3.60555
 
 [node name="Hook" type="Sprite2D"]
 texture = ExtResource("1_iqk41")
+script = ExtResource("2_jc30b")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["hook"]]
 position = Vector2(-4, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -1)
 shape = SubResource("CircleShape2D_p1dfx")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -3,8 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -100.0
-const hook_speed = 155
-const hook_back_speed = 150
+const hook_speed = 60
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -79,7 +78,7 @@ func update_animation():
 		animation_tree["parameters/conditions/throw"] = true
 		$Timer.start()
 	if(Input.is_action_just_pressed("hook")):
-		$hooktexture.visible = false
+		$HookInvisible.start()
 		animation_tree["parameters/conditions/throw"] = false
 		animation_tree["parameters/conditions/hook"] = true
 		
@@ -95,3 +94,7 @@ func _on_timer_timeout():
 
 
 
+
+
+func _on_hook_invisible_timeout():
+	$hooktexture.visible = false

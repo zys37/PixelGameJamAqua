@@ -26,7 +26,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_woi5a"]
-size = Vector2(25, 22)
+size = Vector2(32, 22)
 
 [node name="Fish_purple" type="CharacterBody2D"]
 script = ExtResource("1_te1am")
@@ -34,6 +34,8 @@ script = ExtResource("1_te1am")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7ht5k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -2)
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" groups=["fish"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_woi5a")
