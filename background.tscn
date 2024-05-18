@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cqo1a3ag2e6k"]
+[gd_scene load_steps=28 format=3 uid="uid://cqo1a3ag2e6k"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrpftrwwn48" path="res://graphics/background pixel.png" id="1_shi76"]
 [ext_resource type="Script" path="res://GameManager.gd" id="1_x1og8"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dar76vkmrwkl3" path="res://fish_cat.tscn" id="8_ynrw1"]
 [ext_resource type="PackedScene" uid="uid://5qly8gswfrs6" path="res://fish_purple.tscn" id="9_ywhtw"]
 [ext_resource type="PackedScene" uid="uid://bfjrl1uwodo42" path="res://fish_red.tscn" id="10_nmuhu"]
+[ext_resource type="PackedScene" uid="uid://cwhg2iif6q5em" path="res://radio.tscn" id="10_yjmm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_18rs0"]
 texture = ExtResource("2_3xmho")
@@ -178,6 +179,8 @@ font_color = Color(0.172549, 0.486275, 0.431373, 1)
 outline_size = 15
 outline_color = Color(0.00392157, 0, 0, 1)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_rwaa1"]
+
 [sub_resource type="Gradient" id="Gradient_usocr"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_ba0sj"]
@@ -298,6 +301,22 @@ position = Vector2(-293, 580)
 [node name="Fish_cat4" parent="GameManager" instance=ExtResource("8_ynrw1")]
 position = Vector2(-299, 442)
 
+[node name="Radio" parent="GameManager" instance=ExtResource("10_yjmm7")]
+
+[node name="CheckButton" type="CheckButton" parent="GameManager"]
+custom_minimum_size = Vector2(2, 2)
+offset_left = 756.0
+offset_top = 3.0
+offset_right = 868.0
+offset_bottom = 50.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.623529, 0.854902, 0.709804, 1)
+theme_override_colors/font_pressed_color = Color(0.356863, 0.623529, 0.541176, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_316qi")
+text = "MUSIC"
+icon = SubResource("ViewportTexture_rwaa1")
+
 [node name="Woda2" type="Sprite2D" parent="."]
 visible = false
 material = SubResource("ShaderMaterial_2xj1d")
@@ -321,5 +340,6 @@ one_shot = true
 wait_time = 0.1
 one_shot = true
 
+[connection signal="toggled" from="GameManager/CheckButton" to="GameManager" method="_on_check_button_toggled"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/HookInvisible" to="Player" method="_on_hook_invisible_timeout"]

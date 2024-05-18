@@ -1,3 +1,6 @@
+CheckButton
+AudioStreamPlayer2D
+AnimatedSprite2D
 RigidBody2D
 PinJoint2D
 Timer
@@ -7,9 +10,6 @@ Area2D
 Sprite2D
 CharacterBody2D
 CollisionShape2D
-AnimatedSprite2D
 TileMap
 AnimationPlayer
 AnimationTree
-StaticBody2D
-TextureRect

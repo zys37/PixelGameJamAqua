@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwhg2iif6q5em"]
+
+[ext_resource type="Texture2D" uid="uid://mjobuuwf0e8" path="res://graphics/radio.png" id="1_0wpun"]
+[ext_resource type="AudioStream" uid="uid://b8lcxutk04x3w" path="res://music/rybak.mp3" id="2_psnw4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv70b"]
+atlas = ExtResource("1_0wpun")
+region = Rect2(0, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hud6x"]
+atlas = ExtResource("1_0wpun")
+region = Rect2(44, 0, 44, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmo6b"]
+atlas = ExtResource("1_0wpun")
+region = Rect2(88, 0, 44, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3311"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv70b")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hud6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmo6b")
+}],
+"loop": true,
+"name": &"Music_playing",
+"speed": 5.0
+}]
+
+[node name="Radio" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_l3311")
+animation = &"Idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_psnw4")
+autoplay = true
