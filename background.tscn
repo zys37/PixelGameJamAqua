@@ -303,7 +303,6 @@ position = Vector2(-299, 442)
 position = Vector2(589, 277)
 
 [node name="Woda2" type="Sprite2D" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_2xj1d")
 position = Vector2(548.25, 399.5)
 scale = Vector2(68.4687, 1.1875)

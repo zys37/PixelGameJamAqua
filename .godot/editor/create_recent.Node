@@ -1,3 +1,4 @@
+Label
 Line2D
 Panel
 Button
@@ -9,7 +10,5 @@ AnimatedSprite2D
 RigidBody2D
 PinJoint2D
 Timer
-Label
 Node2D
 Area2D
-CharacterBody2D
