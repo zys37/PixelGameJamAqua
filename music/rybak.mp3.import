@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/rybak.mp3-656c7c3615478a22bb0e072e01de18c7.mp
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

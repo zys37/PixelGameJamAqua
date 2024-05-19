@@ -25,8 +25,6 @@ func _process(delta):
 	update_animation()
 func _physics_process(delta):
 	#hook
-	# Don't process hook movement if animation not active
-
 	# Check if the hook reached the bottom
 	if ($hooktexture.position.y <= target_pos.y and bottom_reached==false):
 		$hooktexture.position.y+=hook_speed*delta
@@ -98,3 +96,4 @@ func _on_timer_timeout():
 
 func _on_hook_invisible_timeout():
 	$hooktexture.visible = false
+	$hooktexture.position.y = hook_initial_pos

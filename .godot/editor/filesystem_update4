@@ -1,10 +1,10 @@
-res://shaders/water.gdshader
-res://radio.tscn
 res://background.tscn
+res://shaders/water.gdshader
 res://player.tscn
 res://fish.tscn
 res://fish_red.tscn
 res://fish_cat.tscn
 res://fish_purple.tscn
 res://hooktexture.tscn
-res://GameManager.gd
+res://radio.tscn
+res://Player.gd
