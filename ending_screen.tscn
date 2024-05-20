@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://cme8i68cvutfg"]
+
+[ext_resource type="Script" path="res://ENDING.gd" id="1_kg85g"]
+[ext_resource type="Texture2D" uid="uid://de3r5p3rlfjil" path="res://graphics/woda2.png" id="3_fbwkr"]
+[ext_resource type="FontFile" uid="uid://dmifqapt5fu2i" path="res://font/ThaleahFat.ttf" id="4_evkgs"]
+
+[sub_resource type="Theme" id="Theme_r8lwr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_r8lwr")
+script = ExtResource("1_kg85g")
+
+[node name="Woda3" type="Sprite2D" parent="."]
+position = Vector2(547, 340)
+scale = Vector2(74.9375, 43.9375)
+texture = ExtResource("3_fbwkr")
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 285.0
+offset_right = 861.0
+offset_bottom = 417.0
+theme_override_fonts/font = ExtResource("4_evkgs")
+theme_override_font_sizes/font_size = 80
+text = "restart"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 445.0
+offset_right = 860.0
+offset_bottom = 583.0
+theme_override_fonts/font = ExtResource("4_evkgs")
+theme_override_font_sizes/font_size = 80
+text = "quit"
+
+[node name="text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 21.0
+offset_right = 908.0
+offset_bottom = 272.0
+theme_override_fonts/font = ExtResource("4_evkgs")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

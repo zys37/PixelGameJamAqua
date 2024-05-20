@@ -7,3 +7,8 @@ res://fish_cat.tscn
 res://fish_purple.tscn
 res://hooktexture.tscn
 res://radio.tscn
+res://ending_screen.tscn
+res://GameManager.gd
+res://global.gd
+res://ENDING.gd
+res://Player.gd

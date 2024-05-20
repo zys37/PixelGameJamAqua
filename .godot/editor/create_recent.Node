@@ -1,8 +1,9 @@
+PathFollow2D
 Label
-Line2D
-Panel
 Button
 AudioStreamPlayer2D
+Line2D
+Panel
 AnimationPlayer
 Sprite2D
 CheckButton

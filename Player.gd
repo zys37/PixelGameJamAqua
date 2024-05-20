@@ -9,6 +9,7 @@ const hook_speed = 60
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animation_tree: AnimationTree = $AnimationTree
 var direction = Vector2.ZERO
+@onready var game_manager = %GameManager
 #hook properties
 var hook_initial_pos = Vector2.ZERO
 var hook_throw_distance = 100
@@ -21,8 +22,11 @@ func _ready():
 	animation_tree.active = true
 	hook_initial_pos=$hooktexture.position.y
 	target_pos.y+=185
+	game_manager.delete_throws()
 func _process(delta):
 	update_animation()
+	if Input.is_action_just_pressed("info"):
+		game_manager.info.visible = false
 func _physics_process(delta):
 	#hook
 	# Check if the hook reached the bottom
@@ -75,6 +79,7 @@ func update_animation():
 		animation_tree["parameters/conditions/hook"] = false
 		animation_tree["parameters/conditions/throw"] = true
 		$Timer.start()
+		game_manager.delete_throws()
 	if(Input.is_action_just_pressed("hook")):
 		$HookInvisible.start()
 		animation_tree["parameters/conditions/throw"] = false

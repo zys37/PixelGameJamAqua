@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cqo1a3ag2e6k"]
+[gd_scene load_steps=29 format=3 uid="uid://cqo1a3ag2e6k"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrpftrwwn48" path="res://graphics/background pixel.png" id="1_shi76"]
 [ext_resource type="Script" path="res://GameManager.gd" id="1_x1og8"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://5qly8gswfrs6" path="res://fish_purple.tscn" id="9_ywhtw"]
 [ext_resource type="PackedScene" uid="uid://bfjrl1uwodo42" path="res://fish_red.tscn" id="10_nmuhu"]
 [ext_resource type="PackedScene" uid="uid://c106nkijxyvu1" path="res://radio.tscn" id="10_yjmm7"]
+[ext_resource type="AudioStream" uid="uid://dca05ndl5llyx" path="res://music/woda.mp3" id="11_cf1gv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_18rs0"]
 texture = ExtResource("2_3xmho")
@@ -173,6 +174,12 @@ texture = ExtResource("3_y0sfu")
 [sub_resource type="TileSet" id="TileSet_4x7k8"]
 sources/1 = SubResource("TileSetAtlasSource_u7xxh")
 
+[sub_resource type="LabelSettings" id="LabelSettings_mbxl6"]
+font_size = 40
+font_color = Color(0.172549, 0.486275, 0.431373, 1)
+outline_size = 15
+outline_color = Color(0.0196078, 0.00784314, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_eaq7b"]
 font_size = 40
 font_color = Color(0.172549, 0.486275, 0.431373, 1)
@@ -187,7 +194,7 @@ seed = 5
 frequency = 0.1
 fractal_type = 0
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lauwy"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ca6qg"]
 color_ramp = SubResource("Gradient_usocr")
 noise = SubResource("FastNoiseLite_ba0sj")
 
@@ -199,7 +206,7 @@ seed = 5
 frequency = 0.1
 fractal_type = 0
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_llsmd"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_taaq8"]
 color_ramp = SubResource("Gradient_jyeyr")
 noise = SubResource("FastNoiseLite_6qane")
 
@@ -212,8 +219,8 @@ shader_parameter/tone_color = Color(0.698039, 0.835294, 0.976471, 1)
 shader_parameter/top_color = Color(1, 0.996078, 0.996078, 1)
 shader_parameter/light_start = 0.275
 shader_parameter/light_end = 0.4
-shader_parameter/noise1 = SubResource("NoiseTexture2D_lauwy")
-shader_parameter/noise2 = SubResource("NoiseTexture2D_llsmd")
+shader_parameter/noise1 = SubResource("NoiseTexture2D_ca6qg")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_taaq8")
 
 [node name="Node2D" type="Node2D"]
 
@@ -227,7 +234,7 @@ position = Vector2(-571, -601)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_e2m3e")
 format = 2
-layer_0/tile_data = PackedInt32Array(1966115, 327680, 8, 1966116, 393216, 8, 1966114, 262144, 8, 1900578, 262144, 7, 1900580, 393216, 7, 1900579, 327680, 7, 1835042, 262144, 6, 1835043, 327680, 6, 1835044, 393216, 6, 1769509, 458752, 5, 1835045, 458752, 6, 1769510, 524288, 5, 1835046, 524288, 6, 1900582, 524288, 7, 1966118, 524288, 8, 1769511, 589824, 5, 1835047, 589824, 6, 1769512, 458752, 5, 1835048, 458752, 6, 1769513, 524288, 5, 1835049, 524288, 6, 1900585, 524288, 7, 1966121, 524288, 8, 1769514, 589824, 5, 1835050, 589824, 6, 1769515, 458752, 5, 1835051, 458752, 6, 1769516, 524288, 5, 1835052, 524288, 6, 1900588, 524288, 7, 1966124, 524288, 8, 1769517, 589824, 5, 1835053, 589824, 6, 1769518, 458752, 5, 1835054, 458752, 6, 1769519, 524288, 5, 1835055, 524288, 6, 1900591, 524288, 7, 1966127, 524288, 8, 1769520, 589824, 5, 1835056, 589824, 6, 1769503, 458752, 5, 1835039, 458752, 6, 1769504, 524288, 5, 1835040, 524288, 6, 1900576, 524288, 7, 1966112, 524288, 8, 1769505, 589824, 5, 1835041, 589824, 6, 1769500, 458752, 5, 1835036, 458752, 6, 1769501, 524288, 5, 1835037, 524288, 6, 1900573, 524288, 7, 1966109, 524288, 8, 1769502, 589824, 5, 1835038, 589824, 6, 1769497, 458752, 5, 1835033, 458752, 6, 1769498, 524288, 5, 1835034, 524288, 6, 1900570, 524288, 7, 1966106, 524288, 8, 1769499, 589824, 5, 1835035, 589824, 6, 1769494, 458752, 5, 1835030, 458752, 6, 1769495, 524288, 5, 1835031, 524288, 6, 1900567, 524288, 7, 1966103, 524288, 8, 1769496, 589824, 5, 1835032, 589824, 6)
+layer_0/tile_data = PackedInt32Array(1966115, 327680, 8, 1966116, 393216, 8, 1966114, 262144, 8, 1900578, 262144, 7, 1900580, 393216, 7, 1900579, 327680, 7, 1835042, 262144, 6, 1835043, 327680, 6, 1835044, 393216, 6, 1769509, 458752, 5, 1835045, 458752, 6, 1769510, 524288, 5, 1835046, 524288, 6, 1900582, 524288, 7, 1966118, 524288, 8, 1769511, 589824, 5, 1835047, 589824, 6, 1769512, 458752, 5, 1835048, 458752, 6, 1769513, 524288, 5, 1835049, 524288, 6, 1900585, 524288, 7, 1966121, 524288, 8, 1769514, 589824, 5, 1835050, 589824, 6, 1769515, 458752, 5, 1835051, 458752, 6, 1769516, 524288, 5, 1835052, 524288, 6, 1900588, 524288, 7, 1966124, 524288, 8, 1769517, 589824, 5, 1835053, 589824, 6, 1769518, 458752, 5, 1835054, 458752, 6, 1769519, 524288, 5, 1835055, 524288, 6, 1900591, 524288, 7, 1966127, 524288, 8, 1769520, 589824, 5, 1835056, 589824, 6, 1769503, 458752, 5, 1835039, 458752, 6, 1769504, 524288, 5, 1835040, 524288, 6, 1900576, 524288, 7, 1966112, 524288, 8, 1769505, 589824, 5, 1835041, 589824, 6, 1769500, 458752, 5, 1835036, 458752, 6, 1769501, 524288, 5, 1835037, 524288, 6, 1900573, 524288, 7, 1966109, 524288, 8, 1769502, 589824, 5, 1835038, 589824, 6, 1769497, 458752, 5, 1835033, 458752, 6, 1769498, 524288, 5, 1835034, 524288, 6, 1900570, 524288, 7, 1966106, 524288, 8, 1769499, 589824, 5, 1835035, 589824, 6, 1769494, 458752, 5, 1835030, 458752, 6, 1769495, 524288, 5, 1835031, 524288, 6, 1900567, 524288, 7, 1966103, 524288, 8, 1769496, 589824, 5, 1835032, 589824, 6, 1769491, 458752, 5, 1835027, 458752, 6, 1769492, 524288, 5, 1835028, 524288, 6, 1900564, 524288, 7, 1966100, 524288, 8, 1769493, 589824, 5, 1835029, 589824, 6, 1769488, 524288, 8, 1835024, 458752, 6, 1769489, 524288, 5, 1835025, 524288, 6, 1900561, 524288, 7, 1966097, 524288, 8, 1769490, 589824, 5, 1835026, 589824, 6, 1769521, 458752, 5, 1835057, 458752, 6, 1769522, 524288, 5, 1835058, 524288, 6, 1900594, 524288, 7, 1966130, 524288, 8, 1769523, 589824, 5, 1835059, 589824, 6, 1769524, 524288, 8, 1835060, 458752, 6, 1769525, 524288, 5, 1835061, 524288, 6, 1900597, 524288, 7, 1966133, 524288, 8, 1769526, 589824, 5, 1835062, 589824, 6, 1703988, 524288, 8, 1638452, 524288, 8, 1572916, 524288, 8, 1703953, 524288, 8, 1638417, 524288, 8, 1572881, 524288, 8)
 
 [node name="TileMapWater" type="TileMap" parent="."]
 position = Vector2(-1, -75)
@@ -238,6 +245,46 @@ layer_0/tile_data = PackedInt32Array(2359296, 1507329, 1, 2359297, 1507329, 1, 2
 [node name="GameManager" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_x1og8")
+
+[node name="game info" type="Label" parent="GameManager"]
+offset_left = 222.0
+offset_top = 4.0
+offset_right = 877.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(0.482353, 0.639216, 0.309804, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_316qi")
+theme_override_font_sizes/font_size = 50
+text = "MOVE LEFT - A
+MOVE RIGHT - D
+THROW - mouse left click
+HOOK - mouse right click
+PRESS \"I\" TO CLOSE  THIS WINDOW"
+
+[node name="SCORE INFO" type="Label" parent="GameManager/game info"]
+layout_mode = 0
+offset_left = -219.0
+offset_top = 141.0
+offset_right = -2.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.458824, 0.341176, 0.72549, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_316qi")
+theme_override_font_sizes/font_size = 30
+text = "SMALL AND FAST 
+FISHES ARE WORTH 
+MORE"
+
+[node name="throws remaining" type="Label" parent="GameManager"]
+offset_left = 800.0
+offset_top = 22.0
+offset_right = 1087.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("3_316qi")
+label_settings = SubResource("LabelSettings_mbxl6")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Label" type="Label" parent="GameManager"]
 offset_left = 37.0
@@ -301,6 +348,24 @@ position = Vector2(-299, 442)
 
 [node name="Radio" parent="GameManager" instance=ExtResource("10_yjmm7")]
 position = Vector2(589, 277)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GameManager"]
+stream = ExtResource("11_cf1gv")
+volume_db = -16.865
+autoplay = true
+
+[node name="Music INFO" type="Label" parent="GameManager"]
+offset_left = 570.0
+offset_top = 241.0
+offset_right = 610.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0.329412, 0.419608, 0.713726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.741176, 1)
+theme_override_fonts/font = ExtResource("3_316qi")
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Woda2" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_2xj1d")
