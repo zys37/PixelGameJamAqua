@@ -1,27 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716212569
-background.tscn::PackedScene::174304243144887536::1716212568::0::1::::<><>::uid://c8qrpftrwwn48::::res://graphics/background pixel.png<>res://GameManager.gd<>uid://cpcymeya30m0i::::res://graphics/spritesheet do gamejama.png<>res://shaders/water.gdshader<>uid://dmifqapt5fu2i::::res://font/ThaleahFat.ttf<>uid://dkcddwnao4sbk::::res://woda.png<>uid://de3r5p3rlfjil::::res://graphics/woda2.png<>uid://c3r0lsswnmcrb::::res://hooktexture.tscn<>uid://b1yf2tdy4jovl::::res://player.tscn<>uid://b01658t4ad2rg::::res://fish.tscn<>uid://dar76vkmrwkl3::::res://fish_cat.tscn<>uid://5qly8gswfrs6::::res://fish_purple.tscn<>uid://bfjrl1uwodo42::::res://fish_red.tscn<>uid://c106nkijxyvu1::::res://radio.tscn<>uid://dca05ndl5llyx::::res://music/woda.mp3
+::res://::1716218960
+background.tscn::PackedScene::174304243144887536::1716216261::0::1::::<><>::uid://c8qrpftrwwn48::::res://graphics/background pixel.png<>res://GameManager.gd<>uid://cpcymeya30m0i::::res://graphics/spritesheet do gamejama.png<>res://shaders/water.gdshader<>uid://dmifqapt5fu2i::::res://font/ThaleahFat.ttf<>uid://dkcddwnao4sbk::::res://woda.png<>uid://de3r5p3rlfjil::::res://graphics/woda2.png<>uid://c3r0lsswnmcrb::::res://hooktexture.tscn<>uid://b1yf2tdy4jovl::::res://player.tscn<>uid://b01658t4ad2rg::::res://fish.tscn<>uid://dar76vkmrwkl3::::res://fish_cat.tscn<>uid://5qly8gswfrs6::::res://fish_purple.tscn<>uid://bfjrl1uwodo42::::res://fish_red.tscn<>uid://c106nkijxyvu1::::res://radio.tscn<>uid://dca05ndl5llyx::::res://music/woda.mp3
 ENDING.gd::GDScript::-1::1716209604::0::1::::<>Control<>::
-ending_screen.tscn::PackedScene::5625384628493504620::1716212569::0::1::::<><>::res://ENDING.gd<>res://shaders/water.gdshader<>uid://de3r5p3rlfjil::::res://graphics/woda2.png<>uid://dmifqapt5fu2i::::res://font/ThaleahFat.ttf
-export_presets.cfg::TextFile::-1::1716210849::0::1::::<><>::
-fish.tscn::PackedScene::4196753160781987756::1716212568::0::1::::<><>::uid://8pj7d3vse8h6::::res://graphics/ryba.png<>res://fish_script.gd
-fish_cat.tscn::PackedScene::7196355895285114618::1716212568::0::1::::<><>::res://fish_script.gd<>uid://dem7tn6lku28x::::res://graphics/sum.png
-fish_purple.tscn::PackedScene::2139407842566911631::1716212568::0::1::::<><>::uid://dkjvh5410xv70::::res://graphics/rybaf.png<>res://fish_script.gd
-fish_red.tscn::PackedScene::2756997531801399909::1716212568::0::1::::<><>::uid://ck1ndwlf3vadl::::res://graphics/rybac.png<>res://fish_script.gd
+ending_screen.tscn::PackedScene::5625384628493504620::1716216263::0::1::::<><>::res://ENDING.gd<>uid://de3r5p3rlfjil::::res://graphics/woda2.png<>uid://dmifqapt5fu2i::::res://font/ThaleahFat.ttf
+export_presets.cfg::TextFile::-1::1716213911::0::1::::<><>::
+fish.tscn::PackedScene::4196753160781987756::1716216262::0::1::::<><>::uid://8pj7d3vse8h6::::res://graphics/ryba.png<>res://fish_script.gd
+fish_cat.tscn::PackedScene::7196355895285114618::1716216262::0::1::::<><>::res://fish_script.gd<>uid://dem7tn6lku28x::::res://graphics/sum.png
+fish_purple.tscn::PackedScene::2139407842566911631::1716216262::0::1::::<><>::uid://dkjvh5410xv70::::res://graphics/rybaf.png<>res://fish_script.gd
+fish_red.tscn::PackedScene::2756997531801399909::1716216262::0::1::::<><>::uid://ck1ndwlf3vadl::::res://graphics/rybac.png<>res://fish_script.gd
 fish_script.gd::GDScript::-1::1715995800::0::1::::<>CharacterBody2D<>::
 GameManager.gd::GDScript::-1::1716209766::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1716209528::0::1::::<>Node<>::
 hooktexture.gd::GDScript::-1::1716205408::0::1::::<>Sprite2D<>::
-hooktexture.tscn::PackedScene::6774761953866448827::1716212568::0::1::::<><>::uid://csdwh1xnk1bl1::::res://graphics/hak.png<>res://hooktexture.gd
+hooktexture.tscn::PackedScene::6774761953866448827::1716216262::0::1::::<><>::uid://csdwh1xnk1bl1::::res://graphics/hak.png<>res://hooktexture.gd
 icon.svg::CompressedTexture2D::702353588804326700::1715888882::1715889910::1::::<><>::
 Player.gd::GDScript::-1::1716209766::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4261228489486282725::1716212568::0::1::::<><>::res://Player.gd<>uid://c26b5or4i4fm3::::res://graphics/RYBAK.png
-radio.tscn::PackedScene::6651266725955622118::1716212568::0::1::::<><>::uid://mjobuuwf0e8::::res://graphics/radio.png<>res://radio_script.gd<>uid://b8lcxutk04x3w::::res://music/rybak.mp3
+player.tscn::PackedScene::4261228489486282725::1716216262::0::1::::<><>::res://Player.gd<>uid://c26b5or4i4fm3::::res://graphics/RYBAK.png
+radio.tscn::PackedScene::6651266725955622118::1716216262::0::1::::<><>::uid://mjobuuwf0e8::::res://graphics/radio.png<>res://radio_script.gd<>uid://b8lcxutk04x3w::::res://music/rybak.mp3
 radio_script.gd::GDScript::-1::1716113930::0::1::::<>Sprite2D<>::
-global.gd::GDScript::-1::1716209528::0::1::::<>Node<>::
 woda.png::CompressedTexture2D::7865467926943790588::1715888882::1715888882::1::::<><>::
 ::res://font/::1716047219
 ThaleahFat.ttf::FontFile::8018375378510130582::1715985407::1715985418::1::::<><>::
-::res://graphics/::1716213155
+::res://graphics/::1716213676
 background pixel.png::CompressedTexture2D::7123162520062547487::1715888882::1715888882::1::::<><>::
 Ground-export.png::CompressedTexture2D::3685677421815797908::1715888882::1715888882::1::::<><>::
 Ground.png::CompressedTexture2D::7215647937585641889::1715888882::1715888882::1::::<><>::
@@ -42,5 +42,5 @@ woda.png::CompressedTexture2D::5378297128742491504::1715888882::1715888882::1:::
 ::res://music/::1716198107
 rybak.mp3::AudioStreamMP3::4725524266595389602::1716047884::1716112833::1::::<><>::
 woda.mp3::AudioStreamMP3::7301211924969967179::1716197875::1716198107::1::::<><>::
-::res://shaders/::1716212569
-water.gdshader::Shader::-1::1716212569::0::1::::<><>::
+::res://shaders/::1716216361
+water.gdshader::Shader::-1::1716216361::0::1::::<><>::
